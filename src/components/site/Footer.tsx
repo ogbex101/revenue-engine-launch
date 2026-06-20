@@ -1,14 +1,19 @@
+import logo from "@/assets/logo.png";
+
 export function Footer() {
   return (
     <footer className="border-t border-border bg-surface-soft">
       <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div>
-            <a href="#top" className="flex items-center gap-2.5">
-              <span className="grid h-8 w-8 place-items-center rounded-lg bg-gradient-brand text-primary-foreground">
-                <span className="text-sm font-bold">CR</span>
-              </span>
-              <span className="text-[15px] font-semibold tracking-tight text-ink">CustomerResults</span>
+            <a href="#top" className="flex items-center" aria-label="CustomerResults — Results Matter">
+              <img
+                src={logo}
+                alt="CustomerResults"
+                className="h-10 w-auto"
+                width={640}
+                height={280}
+              />
             </a>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-ink-soft">
               Revenue acceleration and sales management for ambitious SMBs.

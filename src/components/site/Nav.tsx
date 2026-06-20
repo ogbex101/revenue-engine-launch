@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const links = [
   { href: "#services", label: "Services" },
@@ -33,13 +34,14 @@ export function Nav() {
             : "h-16 bg-transparent",
         ].join(" ")}
       >
-        <a href="#top" className="flex items-center gap-2.5">
-          <span className="grid h-8 w-8 place-items-center rounded-lg bg-gradient-brand text-primary-foreground shadow-glow">
-            <span className="text-sm font-bold tracking-tight">CR</span>
-          </span>
-          <span className="text-[15px] font-semibold tracking-tight text-ink">
-            CustomerResults
-          </span>
+        <a href="#top" className="flex items-center" aria-label="CustomerResults — Results Matter">
+          <img
+            src={logo}
+            alt="CustomerResults"
+            className="h-9 w-auto sm:h-10"
+            width={640}
+            height={280}
+          />
         </a>
 
         <nav className="hidden items-center gap-8 md:flex">
