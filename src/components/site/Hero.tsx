@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { Suspense, lazy } from "react";
+import heroBg from "@/assets/team-meeting.jpg";
 
 const RevenueScene = lazy(() =>
   import("./RevenueScene").then((m) => ({ default: m.RevenueScene }))
@@ -13,6 +14,14 @@ export function Hero() {
     <section id="top" className="relative overflow-hidden pt-28 sm:pt-32">
       {/* Background ornaments */}
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
+        {/* Brand photo backdrop, muted so dark headline stays legible */}
+        <img
+          src={heroBg}
+          alt=""
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.93),rgba(255,255,255,0.8)_45%,rgba(255,255,255,0.6))]" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
         <div className="absolute -top-40 left-1/2 h-[640px] w-[1100px] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,rgba(37,99,235,0.18),transparent_70%)]" />
         <div className="absolute bottom-0 right-0 h-[400px] w-[400px] rounded-full bg-[radial-gradient(closest-side,rgba(245,158,11,0.16),transparent_70%)]" />
         <svg className="absolute inset-0 h-full w-full opacity-[0.04]" aria-hidden>
