@@ -77,16 +77,22 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "CustomerResults — Revenue Acceleration for SMBs" },
+      { name: "description", content: "Data-driven sales strategies that deliver 24% revenue growth in 90 days. Book your free Revenue Audit." },
+      { name: "author", content: "CustomerResults" },
+      { property: "og:title", content: "CustomerResults — Revenue Acceleration for SMBs" },
+      { property: "og:description", content: "Data-driven sales strategies that deliver 24% revenue growth in 90 days." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap",
+      },
       {
         rel: "stylesheet",
         href: appCss,
